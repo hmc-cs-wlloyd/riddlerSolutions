@@ -1,0 +1,55 @@
+\documentclass[12pt,letterpaper]{hmcpset}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+% info for header block in upper right hand corner
+
+\newcommand{\pn}[1]{\left( #1 \right)}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\bk}[1]{\left[ #1 \right]}
+
+\newcommand{\vb}{\mathbf{v}}
+\newcommand{\ub}{\mathbf{u}}
+\newcommand{\fx}{f \left( x \right) =}
+\newcommand*\LH{\ensuremath{\overset{\kern2pt L'H}{=}}}
+\renewcommand{\labelenumi}{{(\alph{enumi})}}
+
+\newcommand{\Zz}{\mathbb{Z}}
+\newcommand{\Rr}{\mathbb{R}}
+\newcommand{\Qq}{\mathbb{Q}}
+\newcommand{\Cc}{\mathbb{C}}
+
+\begin{document}
+
+\begin{problem}
+The classic birthday problem asks about how many people need to be in a room together before you have 
+better-than-even odds that at least two of them have the same birthday. Ignoring leap years, the answer is, 
+paradoxically, only 23 people — fewer than you might intuitively think.
+
+But Joel noticed something interesting about a well-known group of 100 people: In the U.S. Senate, three senators 
+happen to share the same birthday of October 20: Kamala Harris, Brian Schatz and Sheldon Whitehouse.
+
+And so Joel has thrown a new wrinkle into the classic birthday problem. How many people do you need to have 
+better-than-even odds that at least three of them have the same birthday? (Again, ignore leap years.)
+\end{problem}
+
+\begin{solution}
+The probability that any $k$ people have the same birthday is, ignoring leap years, $\left(\frac{1}{365}\right)^{(k-1)}$,
+because the first person will have some birthday, and then we want the probability that the other $k-1$ people were all
+born on that specific day. The probability that, in a room of $n$ people, $k$ of them have the same birthday, is
+equivalent to 1 minus the probability that no group of $k$ people have the same birthday. That probability is
+$1-\left(\frac{1}{365}\right)^{(k-1)}$ raised to the power of the number of possible groups of $k$ people, or
+${n \choose k}$. Thus, the probability of $k$ people sharing a birthday in a room of $n$ people is
+$$1- \left(1-\left(\frac{1}{365}\right)^{(k-1)}\right)^{n \choose k}.$$
+In the case where $k = 3$, this becomes
+$$1- \left(1-\left(\frac{1}{365}\right)^{(2)}\right)^{n \choose 3}.$$
+If we set this equal to $.5$ and solve for $n$, we get 83.1375, meaning we need at least 84 people in a room before we
+get better than even odds that 3 of them share a birthday. We can also use the equation above to see that in any given
+US Senate, the odds of three Senators sharing a birthday are 70.29\%.
+
+\vfill
+\end{solution}
+\newpage
+
+\end{document}
