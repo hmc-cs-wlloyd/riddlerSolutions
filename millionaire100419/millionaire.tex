@@ -1,0 +1,50 @@
+\documentclass[12pt,letterpaper]{hmcpset}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+% info for header block in upper right hand corner
+
+\newcommand{\pn}[1]{\left( #1 \right)}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\bk}[1]{\left[ #1 \right]}
+
+\newcommand{\vb}{\mathbf{v}}
+\newcommand{\ub}{\mathbf{u}}
+\newcommand{\fx}{f \left( x \right) =}
+\newcommand*\LH{\ensuremath{\overset{\kern2pt L'H}{=}}}
+\renewcommand{\labelenumi}{{(\alph{enumi})}}
+
+\newcommand{\Zz}{\mathbb{Z}}
+\newcommand{\Rr}{\mathbb{R}}
+\newcommand{\Qq}{\mathbb{Q}}
+\newcommand{\Cc}{\mathbb{C}}
+
+\begin{document}
+
+\begin{problem}
+You've made it to the \$1 million question, but it's a tough one. 
+Out of the four choices, A, B, C and D, you're 70 percent sure the answer is B, 
+and none of the remaining choices looks more plausible than another. 
+You decide to use your final lifeline, the 50:50, which leaves you with two possible answers, one of them correct.
+Lo and behold, B remains an option! How confident are you now that B is the correct answer?	
+\end{problem}
+
+\begin{solution}
+Since there is no difference relevant to this problem between A, C, and D, let us for convenience assume that after we
+invoke our 50:50, the possible answers remaining are A and B. The 50:50 has given us the information that either A or
+B is the right answer. We then want to find the probability that, given that A or B is correct, B is correct. We can
+invoke Bayes' Theorem to see that that probability is equal to
+$$P(B | A \cup B) = \frac{P(A \cup B | B)P(B)}{P(A \cup B)}.$$
+The probability that either A or B is correct given that B is correct is clearly 1, so the $P(A \cup B | B)$ disappears
+from our equation, leaving us with
+$$P(B | A \cup B) = \frac{P(B)}{P(A \cup B)}.$$
+This we can determine from the probabilities we knew before invoking the 50:50. $P(B) = .7$, and the remaining $.3$ of
+probability was divided evenly between A, C, and D, so $P(A) = .1$. Thus $P(A \cup B) = .8$, and therefore
+$$P(B | A \cup B) = \frac{.7}{.8} = .875.$$
+Hence, you can now be 87.5 percent confident that B is the correct answer.
+\vfill
+\end{solution}
+\newpage
+
+\end{document}
