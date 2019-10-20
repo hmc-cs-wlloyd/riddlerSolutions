@@ -1,0 +1,90 @@
+\documentclass[12pt,letterpaper]{hmcpset}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[table]{xcolor}
+
+% info for header block in upper right hand corner
+
+\newcommand{\pn}[1]{\left( #1 \right)}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\bk}[1]{\left[ #1 \right]}
+
+\newcommand{\vb}{\mathbf{v}}
+\newcommand{\ub}{\mathbf{u}}
+\newcommand{\fx}{f \left( x \right) =}
+\newcommand*\LH{\ensuremath{\overset{\kern2pt L'H}{=}}}
+\renewcommand{\labelenumi}{{(\alph{enumi})}}
+
+\newcommand{\Zz}{\mathbb{Z}}
+\newcommand{\Rr}{\mathbb{R}}
+\newcommand{\Qq}{\mathbb{Q}}
+\newcommand{\Cc}{\mathbb{C}}
+
+\begin{document}
+
+\begin{problem}
+The number in each box tells you how many spaces up, down, left, or right you must move. (No diagonal moves, people.)
+Starting at the yellow six in the bottom left corner, can you make your way to the asterisk?
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+6 & 2 & 1 & 3 & 6 & 1 & 7 & 7 & 4 & 3 \\
+\hline
+2 & 3 & 4 & 5 & 7 & 8 & 1 & 5 & 2 & 3 \\
+\hline
+1 & 6 & 1 & 2 & 5 & 1 & 6 & 3 & 6 & 2 \\
+\hline
+5 & 3 & 5 & 5 & 1 & 6 & 7 & 3 & 7 & 3 \\
+\hline
+1 & 2 & 6 & 4 & 1 & 3 & 3 & 5 & 5 & 5 \\
+\hline
+2 & 4 & 6 & 6 & 6 & 2 & 1 & 3 & 8 & 8 \\
+\hline
+2 & 4 & * & 2 & 3 & 6 & 5 & 2 & 4 & 6 \\
+\hline
+3 & 1 & 7 & 6 & 2 & 3 & 1 & 5 & 7 & 7 \\
+\hline
+6 & 1 & 3 & 6 & 4 & 5 & 4 & 2 & 2 & 7 \\
+\hline
+\cellcolor{yellow}6 & 7 & 5 & 7 & 6 & 2 & 4 & 1 & 9 & 1 \\
+\hline
+\end{tabular}
+\end{center}
+\end{problem}
+
+\begin{solution}
+The path through the maze is as shown below. Squares visited along the path are shown in yellow, squares "passed over"
+are shown in blue.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\cellcolor{yellow}6 & \cellcolor{blue!50}2 & \cellcolor{blue!50}1 & \cellcolor{yellow}3 & 6 & 1 & 7 & 7 & 4 & 3 \\
+\hline
+\cellcolor{blue!50}2 & 3 & 4 & \cellcolor{blue!50}5 & 7 & 8 & 1 & 5 & 2 & 3 \\
+\hline
+\cellcolor{blue!50}1 & 6 & 1 & \cellcolor{blue!50}2 & 5 & 1 & 6 & 3 & 6 & 2 \\
+\hline
+\cellcolor{blue!50}5 & 3 & 5 & \cellcolor{blue!50}5 & 1 & 6 & 7 & 3 & 7 & 3 \\
+\hline
+\cellcolor{blue!50}1 & 2 & 6 & \cellcolor{yellow}4 & \cellcolor{blue!50}1 & \cellcolor{blue!50}3 & \cellcolor{yellow}3 & 5 & 5 & 5 \\
+\hline
+\cellcolor{blue!50}2 & 4 & 6 & 6 & 6 & 2 & \cellcolor{yellow}1 & 3 & 8 & 8 \\
+\hline
+\cellcolor{yellow}2 & \cellcolor{blue!50}4 & \cellcolor{yellow}* & 2 & 3 & 6 & \cellcolor{blue!50}5 & 2 & 4 & 6 \\
+\hline
+3 & 1 & 7 & 6 & 2 & 3 & \cellcolor{blue!50}1 & 5 & 7 & 7 \\
+\hline
+6 & 1 & 3 & 6 & 4 & 5 & \cellcolor{blue!50}4 & 2 & 2 & 7 \\
+\hline
+\cellcolor{yellow}6 & \cellcolor{blue!50}7 & \cellcolor{blue!50}5 & \cellcolor{blue!50}7 & \cellcolor{blue!50}6 & \cellcolor{blue!50}2 & \cellcolor{yellow}4 & 1 & 9 & 1 \\
+\hline
+\end{tabular}
+\end{center}
+
+\vfill
+\end{solution}
+\newpage
+
+\end{document}
